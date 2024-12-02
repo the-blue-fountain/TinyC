@@ -1,0 +1,261 @@
+
+____________________________________________________________________________________________________
+Three Address Code:
+____________________________________________________________________________________________________
+L0:     t0 = 100
+L1:     global_var = t0
+
+L2: main: 
+L3:     text = t0
+L4:     pattern = t1
+L5:     param text
+L6:     param pattern
+L7:     t2 = call KMPSearch, 2
+L8:     goto 14
+L9:     param t3
+L10:     t4 = call printf, 1
+L11:     goto 16
+L12:     param t5
+L13:     t6 = call printf, 1
+L14:     12 = (t2 == 0)
+L15:     goto 9
+L16:     t7 = 0
+L17:     return t7
+
+L18: buildLPS: 
+
+L19: buildLPS: 
+L20:     t0 = 5.01
+L21:     t1 = 2
+L22:     t2 = float2int(t0)
+L23:     t3 = t2 / t1
+L24:     test = t3
+L25:     t4 = 5
+L26:     t5 = 5
+L27:     t6 = t4 - t5
+L28:     t7 = 10
+L29:     t8 = t6 * t7
+L30:     len = t8
+L31:     t9 = 0
+L32:     t10 = t9 * 4
+L33:     t11 = 0
+L34:     lps[t10] = t11
+L35:     t13 = 1
+L36:     i = t13
+L37:     39 = (i < m)
+L38:     goto 
+L39:     t14 = i * 1
+L40:     t15 = pattern[t14]
+L41:     t16 = len * 1
+L42:     t17 = pattern[t16]
+L43:     46 = (t15 == t17)
+L44:     goto 53
+L45:     goto 68
+L46:     t18 = len
+L47:     len = len + 1
+L48:     t19 = i * 4
+L49:     lps[t19] = len
+L50:     t21 = i
+L51:     i = i + 1
+L52:     goto 37
+L53:     t22 = 0
+L54:     57 = (len != t22)
+L55:     goto 63
+L56:     goto 68
+L57:     t23 = 1
+L58:     t24 = len - t23
+L59:     t25 = t24 * 4
+L60:     t26 = lps[t25]
+L61:     len = t26
+L62:     goto 37
+L63:     t28 = i * 4
+L64:     t29 = 0
+L65:     lps[t28] = t29
+L66:     t31 = i
+L67:     i = i + 1
+L68:     goto 37
+
+L69: KMPSearch: 
+
+L70: KMPSearch: 
+L71:     param text
+L72:     t0 = call strlen, 1
+L73:     n = t0
+L74:     param pattern
+L75:     t1 = call strlen, 1
+L76:     m = t1
+L77:     t2 = 100
+L78:     param pattern
+L79:     param lps
+L80:     param m
+L81:     t3 = call buildLPS, 3
+L82:     t4 = 0
+L83:     i = t4
+L84:     t5 = 0
+L85:     j = t5
+L86:     88 = (i < n)
+L87:     goto 130
+L88:     t6 = j * 1
+L89:     t7 = pattern[t6]
+L90:     t8 = i * 1
+L91:     t9 = text[t8]
+L92:     95 = (t7 == t9)
+L93:     goto 100
+L94:     goto 100
+L95:     t10 = i
+L96:     i = i + 1
+L97:     t11 = j
+L98:     j = j + 1
+L99:     goto 100
+L100:     103 = (j == m)
+L101:     goto 106
+L102:     goto 129
+L103:     t12 = 1
+L104:     return t12
+L105:     goto 86
+L106:     109 = (i < n)
+L107:     goto 86
+L108:     goto 115
+L109:     t13 = j * 1
+L110:     t14 = pattern[t13]
+L111:     t15 = i * 1
+L112:     t16 = text[t15]
+L113:     116 = (t14 != t16)
+L114:     goto 86
+L115:     goto 129
+L116:     t17 = 0
+L117:     120 = (j != t17)
+L118:     goto 126
+L119:     goto 128
+L120:     t18 = 1
+L121:     t19 = j - t18
+L122:     t20 = t19 * 4
+L123:     t21 = lps[t20]
+L124:     j = t21
+L125:     goto 86
+L126:     t23 = i
+L127:     i = i + 1
+L128:     goto 86
+L129:     goto 86
+L130:     t24 = 0
+L131:     return t24
+____________________________________________________________________________________________________
+____________________________________________________________________________________________________
+Table Name: Global			 Parent Name: NULL
+____________________________________________________________________________________________________
+Name           Type                Initial Value       Size           Offset         Nested
+                                                                                                    
+buildLPS       void                -                   0              0              buildLPS
+KMPSearch      int                 -                   4              0              KMPSearch
+global_var     int                 100                 4              4              NULL
+t0             int                 100                 4              8              NULL
+main           int                 -                   4              12             main
+----------------------------------------------------------------------------------------------------
+
+____________________________________________________________________________________________________
+Table Name: buildLPS			 Parent Name: Global
+____________________________________________________________________________________________________
+Name           Type                Initial Value       Size           Offset         Nested
+                                                                                                    
+pattern        ptr(char)           -                   4              0              NULL
+lps            ptr(int)            -                   4              4              NULL
+m              int                 -                   4              8              NULL
+test           float               -                   8              12             NULL
+t0             float               5.01                8              20             NULL
+t1             int                 2                   4              28             NULL
+t2             int                                     4              32             NULL
+t3             int                                     4              36             NULL
+len            int                 -                   4              40             NULL
+t4             int                 5                   4              44             NULL
+t5             int                 5                   4              48             NULL
+t6             int                                     4              52             NULL
+t7             int                 10                  4              56             NULL
+t8             int                                     4              60             NULL
+t9             int                 0                   4              64             NULL
+t10            int                                     4              68             NULL
+t11            int                 0                   4              72             NULL
+t12            int                                     4              76             NULL
+i              int                 1                   4              80             NULL
+t13            int                 1                   4              84             NULL
+t14            int                                     4              88             NULL
+t15            int                                     4              92             NULL
+t16            int                                     4              96             NULL
+t17            int                                     4              100            NULL
+t18            int                                     4              104            NULL
+t19            int                                     4              108            NULL
+t20            int                                     4              112            NULL
+t21            int                                     4              116            NULL
+t22            int                 0                   4              120            NULL
+t23            int                 1                   4              124            NULL
+t24            int                                     4              128            NULL
+t25            int                                     4              132            NULL
+t26            int                                     4              136            NULL
+t27            int                                     4              140            NULL
+t28            int                                     4              144            NULL
+t29            int                 0                   4              148            NULL
+t30            int                                     4              152            NULL
+t31            int                                     4              156            NULL
+----------------------------------------------------------------------------------------------------
+
+____________________________________________________________________________________________________
+Table Name: KMPSearch			 Parent Name: Global
+____________________________________________________________________________________________________
+Name           Type                Initial Value       Size           Offset         Nested
+                                                                                                    
+text           ptr(char)           -                   4              0              NULL
+pattern        ptr(char)           -                   4              4              NULL
+return         int                 -                   4              8              NULL
+n              int                 -                   4              12             NULL
+strlen         int                 -                   4              16             NULL
+t0             int                                     4              20             NULL
+m              int                 -                   4              24             NULL
+t1             int                                     4              28             NULL
+lps            arr(100,int)        -                   400            32             NULL
+t2             int                 100                 4              432            NULL
+buildLPS       int                 -                   4              436            NULL
+t3             int                                     4              440            NULL
+i              int                 0                   4              444            NULL
+t4             int                 0                   4              448            NULL
+j              int                 0                   4              452            NULL
+t5             int                 0                   4              456            NULL
+t6             int                                     4              460            NULL
+t7             int                                     4              464            NULL
+t8             int                                     4              468            NULL
+t9             int                                     4              472            NULL
+t10            int                                     4              476            NULL
+t11            int                                     4              480            NULL
+t12            int                 1                   4              484            NULL
+t13            int                                     4              488            NULL
+t14            int                                     4              492            NULL
+t15            int                                     4              496            NULL
+t16            int                                     4              500            NULL
+t17            int                 0                   4              504            NULL
+t18            int                 1                   4              508            NULL
+t19            int                                     4              512            NULL
+t20            int                                     4              516            NULL
+t21            int                                     4              520            NULL
+t22            int                                     4              524            NULL
+t23            int                                     4              528            NULL
+t24            int                 0                   4              532            NULL
+----------------------------------------------------------------------------------------------------
+
+____________________________________________________________________________________________________
+Table Name: main			 Parent Name: Global
+____________________________________________________________________________________________________
+Name           Type                Initial Value       Size           Offset         Nested
+                                                                                                    
+return         int                 -                   4              0              NULL
+text           arr(0,char)         "hello world"       0              4              NULL
+t0             ptr(char)           "hello world"       4              4              NULL
+pattern        arr(0,char)         "world"             0              8              NULL
+t1             ptr(char)           "world"             4              8              NULL
+KMPSearch      int                 -                   4              12             NULL
+t2             int                                     4              16             NULL
+printf         int                 -                   4              20             NULL
+t3             ptr(char)           "Pattern found!\n"  4              24             NULL
+t4             int                                     4              28             NULL
+t5             ptr(char)           "Pattern not found.\n"4              32             NULL
+t6             int                                     4              36             NULL
+t7             int                 0                   4              40             NULL
+----------------------------------------------------------------------------------------------------
+

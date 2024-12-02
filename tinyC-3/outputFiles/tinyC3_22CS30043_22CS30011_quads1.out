@@ -1,0 +1,149 @@
+
+____________________________________________________________________________________________________
+Three Address Code:
+____________________________________________________________________________________________________
+L0:     t0 = 100
+L1:     myVar_1 = t0
+L2:     t1 = 50.25
+L3:     _myFloatVar2 = t1
+L4:     t2 = 123
+L5:     a = t2
+L6:     t3 = 0
+L7:     b = t3
+L8:     t4 = 1.23
+L9:     c = t4
+L10:     t5 = 3.14e-10
+L11:     d = t5
+L12:     t6 = 'a'
+L13:     ch1 = t6
+L14:     t7 = '\n'
+L15:     ch2 = t7
+L16:     str1 = t8
+L17:     str2 = t9
+L18:     t10 = 12
+L19:     t11 = 2
+L20:     t12 = 2
+L21:     t13 = 4
+L22:     a = t13
+
+L23: main: 
+L24:     t0 = 120
+L25:     x = t0
+L26:     t1 = 17
+L27:     y = t1
+L28:     t2 = 'c'
+L29:     ch = t2
+L30:     t3 = 'a'
+L31:     d = t3
+L32:     t4 = x + y
+L33:     sum = t4
+L34:     t6 = x - y
+L35:     diff = t6
+L36:     t8 = x * y
+L37:     prod = t8
+L38:     t10 = x / y
+L39:     div = t10
+L40:     t12 = x % y
+L41:     rem = t12
+L42:     t14 = x & y
+L43:     and = t14
+L44:     t16 = x | y
+L45:     or = t16
+L46:     t18 = 2
+L47:     t19 = y << t18
+L48:     y = t19
+L49:     t21 = 1
+L50:     t22 = x >> t21
+L51:     x = t22
+L52:     t24 = 0
+L53:     return t24
+____________________________________________________________________________________________________
+____________________________________________________________________________________________________
+Table Name: Global			 Parent Name: NULL
+____________________________________________________________________________________________________
+Name           Type                Initial Value       Size           Offset         Nested
+                                                                                                    
+myVar_1        int                 100                 4              0              NULL
+t0             int                 100                 4              4              NULL
+_myFloatVar2   float               50.25               8              8              NULL
+t1             float               50.25               8              16             NULL
+a              int                 4                   4              24             NULL
+t2             int                 123                 4              28             NULL
+b              int                 0                   4              32             NULL
+t3             int                 0                   4              36             NULL
+c              char                1.23                1              40             NULL
+t4             float               1.23                8              41             NULL
+d              float               3.14e-10            8              49             NULL
+t5             float               3.14e-10            8              57             NULL
+ch1            char                'a'                 1              65             NULL
+t6             char                'a'                 1              66             NULL
+ch2            char                '\n'                1              67             NULL
+t7             char                '\n'                1              68             NULL
+str1           ptr(char)           "Hello, World!"     4              69             NULL
+t8             ptr(char)           "Hello, World!"     4              73             NULL
+str2           ptr(char)           "'C' Programming"   4              77             NULL
+t9             ptr(char)           "'C' Programming"   4              81             NULL
+testint        int                 -                   4              85             NULL
+matint         arr(12,int)         -                   48             89             NULL
+t10            int                 12                  4              137            NULL
+matfloat       arr(2,arr(2,float)) -                   32             141            NULL
+t11            int                 2                   4              173            NULL
+t12            int                 2                   4              177            NULL
+t13            int                 4                   4              181            NULL
+p              ptr(int)            -                   4              185            NULL
+quotient       void                -                   0              189            quotient
+main           void                -                   0              189            main
+----------------------------------------------------------------------------------------------------
+
+____________________________________________________________________________________________________
+Table Name: quotient			 Parent Name: Global
+____________________________________________________________________________________________________
+Name           Type                Initial Value       Size           Offset         Nested
+                                                                                                    
+i              int                 -                   4              0              NULL
+d              float               -                   8              4              NULL
+----------------------------------------------------------------------------------------------------
+
+____________________________________________________________________________________________________
+Table Name: main			 Parent Name: Global
+____________________________________________________________________________________________________
+Name           Type                Initial Value       Size           Offset         Nested
+                                                                                                    
+x              int                 120                 4              0              NULL
+t0             int                 120                 4              4              NULL
+y              int                 17                  4              8              NULL
+t1             int                 17                  4              12             NULL
+sum            int                 -                   4              16             NULL
+diff           int                 -                   4              20             NULL
+prod           int                 -                   4              24             NULL
+div            int                 -                   4              28             NULL
+rem            int                 -                   4              32             NULL
+and            int                 -                   4              36             NULL
+or             int                 -                   4              40             NULL
+ch             char                'c'                 1              44             NULL
+t2             char                'c'                 1              45             NULL
+d              char                'a'                 1              46             NULL
+t3             char                'a'                 1              47             NULL
+t4             int                                     4              48             NULL
+t5             int                                     4              52             NULL
+t6             int                                     4              56             NULL
+t7             int                                     4              60             NULL
+t8             int                                     4              64             NULL
+t9             int                                     4              68             NULL
+t10            int                                     4              72             NULL
+t11            int                                     4              76             NULL
+t12            int                                     4              80             NULL
+t13            int                                     4              84             NULL
+t14            int                                     4              88             NULL
+t15            int                                     4              92             NULL
+t16            int                                     4              96             NULL
+t17            int                                     4              100            NULL
+t18            int                 2                   4              104            NULL
+t19            int                                     4              108            NULL
+t20            int                                     4              112            NULL
+t21            int                 1                   4              116            NULL
+t22            int                                     4              120            NULL
+t23            int                                     4              124            NULL
+t24            int                 0                   4              128            NULL
+----------------------------------------------------------------------------------------------------
+

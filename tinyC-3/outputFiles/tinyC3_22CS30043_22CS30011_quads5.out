@@ -1,0 +1,230 @@
+
+____________________________________________________________________________________________________
+Three Address Code:
+____________________________________________________________________________________________________
+
+L0: factorial: 
+L1:     t0 = 1
+L2:     9 = (n == t0)
+L3:     goto 5
+L4:     goto 8
+L5:     t1 = 0
+L6:     9 = (n == t1)
+L7:     goto 12
+L8:     goto 12
+L9:     t2 = 1
+L10:     return t2
+L11:     goto 12
+L12:     t3 = 1
+L13:     t4 = n - t3
+L14:     param t4
+L15:     t5 = call fact, 1
+L16:     t6 = n * t5
+L17:     return t6
+
+L18: swap: 
+L19:     t0 = *a
+L20:     temp = t0
+L21:     t1 = *a
+L22:     t2 = *b
+L23:     *a = t2
+L24:     t3 = *b
+L25:     *b = temp
+
+L26: fibo: 
+L27:     t0 = 0
+L28:     31 = (n == t0)
+L29:     goto 34
+L30:     goto 34
+L31:     t1 = 0
+L32:     return t1
+L33:     goto 34
+L34:     t2 = 1
+L35:     38 = (n == t2)
+L36:     goto 41
+L37:     goto 41
+L38:     t3 = 1
+L39:     return t3
+L40:     goto 41
+L41:     t4 = 1
+L42:     t5 = n - t4
+L43:     param t5
+L44:     t6 = call fibo, 1
+L45:     t7 = 2
+L46:     t8 = n - t7
+L47:     param t8
+L48:     t9 = call fibo, 1
+L49:     t10 = t6 + t9
+L50:     return t10
+
+L51: GCD: 
+L52:     t0 = 0
+L53:     56 = (a == t0)
+L54:     goto 58
+L55:     goto 58
+L56:     return b
+L57:     goto 58
+L58:     t1 = b % a
+L59:     param t1
+L60:     param a
+L61:     t2 = call GCD, 2
+L62:     return t2
+
+L63: main: 
+L64:     t0 = 42
+L65:     fact = t0
+L66:     t1 = 0
+L67:     flag = t1
+L68:     t2 = 0
+L69:     72 = (flag == t2)
+L70:     goto 84
+L71:     goto 88
+L72:     t3 = 20
+L73:     a = t3
+L74:     t5 = 1
+L75:     78 = (flag == t5)
+L76:     goto 81
+L77:     goto 83
+L78:     t6 = 5
+L79:     b = t6
+L80:     goto 88
+L81:     t8 = 4
+L82:     b = t8
+L83:     goto 88
+L84:     t10 = 150
+L85:     a = t10
+L86:     t12 = 25
+L87:     b = t12
+L88:     param a
+L89:     param b
+L90:     t14 = call GCD, 2
+L91:     g = t14
+L92:     t16 = a * b
+L93:     param t16
+L94:     t17 = call factorial, 1
+L95:     fact = t17
+L96:     t19 = &a
+L97:     param t19
+L98:     t20 = &b
+L99:     param t20
+L100:     t21 = call swap, 2
+L101:     t22 = 0
+L102:     return t22
+____________________________________________________________________________________________________
+____________________________________________________________________________________________________
+Table Name: Global			 Parent Name: NULL
+____________________________________________________________________________________________________
+Name           Type                Initial Value       Size           Offset         Nested
+                                                                                                    
+factorial      int                 -                   4              0              factorial
+swap           void                -                   0              4              swap
+fibo           int                 -                   4              4              fibo
+GCD            int                 -                   4              8              GCD
+main           int                 -                   4              12             main
+----------------------------------------------------------------------------------------------------
+
+____________________________________________________________________________________________________
+Table Name: factorial			 Parent Name: Global
+____________________________________________________________________________________________________
+Name           Type                Initial Value       Size           Offset         Nested
+                                                                                                    
+n              int                 -                   4              0              NULL
+return         int                 -                   4              4              NULL
+t0             int                 1                   4              8              NULL
+t1             int                 0                   4              12             NULL
+t2             int                 1                   4              16             NULL
+fact           int                 -                   4              20             NULL
+t3             int                 1                   4              24             NULL
+t4             int                                     4              28             NULL
+t5             int                                     4              32             NULL
+t6             int                                     4              36             NULL
+----------------------------------------------------------------------------------------------------
+
+____________________________________________________________________________________________________
+Table Name: swap			 Parent Name: Global
+____________________________________________________________________________________________________
+Name           Type                Initial Value       Size           Offset         Nested
+                                                                                                    
+a              ptr(int)            -                   4              0              NULL
+b              ptr(int)            -                   4              4              NULL
+temp           int                 -                   4              8              NULL
+t0             int                                     4              12             NULL
+t1             int                                     4              16             NULL
+t2             int                                     4              20             NULL
+t3             int                                     4              24             NULL
+----------------------------------------------------------------------------------------------------
+
+____________________________________________________________________________________________________
+Table Name: fibo			 Parent Name: Global
+____________________________________________________________________________________________________
+Name           Type                Initial Value       Size           Offset         Nested
+                                                                                                    
+n              int                 -                   4              0              NULL
+return         int                 -                   4              4              NULL
+t0             int                 0                   4              8              NULL
+t1             int                 0                   4              12             NULL
+t2             int                 1                   4              16             NULL
+t3             int                 1                   4              20             NULL
+fibo           int                 -                   4              24             NULL
+t4             int                 1                   4              28             NULL
+t5             int                                     4              32             NULL
+t6             int                                     4              36             NULL
+t7             int                 2                   4              40             NULL
+t8             int                                     4              44             NULL
+t9             int                                     4              48             NULL
+t10            int                                     4              52             NULL
+----------------------------------------------------------------------------------------------------
+
+____________________________________________________________________________________________________
+Table Name: GCD			 Parent Name: Global
+____________________________________________________________________________________________________
+Name           Type                Initial Value       Size           Offset         Nested
+                                                                                                    
+a              int                 -                   4              0              NULL
+b              int                 -                   4              4              NULL
+return         int                 -                   4              8              NULL
+t0             int                 0                   4              12             NULL
+GCD            int                 -                   4              16             NULL
+t1             int                                     4              20             NULL
+t2             int                                     4              24             NULL
+----------------------------------------------------------------------------------------------------
+
+____________________________________________________________________________________________________
+Table Name: main			 Parent Name: Global
+____________________________________________________________________________________________________
+Name           Type                Initial Value       Size           Offset         Nested
+                                                                                                    
+return         int                 -                   4              0              NULL
+a              int                 -                   4              4              NULL
+b              int                 -                   4              8              NULL
+g              int                 -                   4              12             NULL
+fact           int                 42                  4              16             NULL
+t0             int                 42                  4              20             NULL
+flag           int                 0                   4              24             NULL
+t1             int                 0                   4              28             NULL
+t2             int                 0                   4              32             NULL
+t3             int                 20                  4              36             NULL
+t4             int                                     4              40             NULL
+t5             int                 1                   4              44             NULL
+t6             int                 5                   4              48             NULL
+t7             int                                     4              52             NULL
+t8             int                 4                   4              56             NULL
+t9             int                                     4              60             NULL
+t10            int                 150                 4              64             NULL
+t11            int                                     4              68             NULL
+t12            int                 25                  4              72             NULL
+t13            int                                     4              76             NULL
+GCD            int                 -                   4              80             NULL
+t14            int                                     4              84             NULL
+t15            int                                     4              88             NULL
+factorial      int                 -                   4              92             NULL
+t16            int                                     4              96             NULL
+t17            int                                     4              100            NULL
+t18            int                                     4              104            NULL
+swap           int                 -                   4              108            NULL
+t19            ptr(int)                                4              112            NULL
+t20            ptr(int)                                4              116            NULL
+t21            int                                     4              120            NULL
+t22            int                 0                   4              124            NULL
+----------------------------------------------------------------------------------------------------
+
